@@ -46,7 +46,8 @@ uv venv
 # 激活虚拟环境
 # linux 下命令
 source .venv/bin/activate
-# windows 下命令
+
+# windows 下命令(作者用的此命令)
 .venv\Scripts\activate
 
 
