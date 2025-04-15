@@ -1,8 +1,9 @@
 
 
 # 项目介绍
-# mcp的天气查询的agent的完整示例
+# mcp的天气查询的agent的完整示例-支持stdio模式，和 sse两种模式；
 
+支持sse、stdio两种模式；
 支持claude、openai、deepseek、qwen等大模型；
 天气查询api，采用  openweathermap 
 可以访问openweathermap的网址，获取apikey；   
