@@ -74,6 +74,7 @@ uv pip install mcp  mcp[cli]  anthropic  openai   httpx  -i https://pypi.tuna.ts
 ###   配置.env 文件，填入你的大模型密钥
 
 
+## 一、stdio模式的示例，下面会介绍sse模式的示例
 
 ### 利用deepseek大模型进行问答
 
@@ -95,7 +96,7 @@ uv run client_openai.py   weather_server.py
 
 
 
-## 当然你也可以单独运行 mcp服务端，用于提供给互联网环境使用
+## 当然你也可以单独运行 mcp服务端[stdio模式]
 
 uv run  mcp dev weather_server.py
 
@@ -112,6 +113,37 @@ http://127.0.0.1:6274
 
 服务端-工具列表使用截图：
 ![image](images/服务端-工具列表使用截图.jpg)
+
+
+
+
+## 二、sse模式mcp的示例
+
+### 1、运行sse的服务端  weather_server_sse.py
+
+进入sse_demo 的文件夹
+cd sse_demo 
+
+运行sse的服务端，端口默认为9000
+
+uv run weather_server_sse.py
+
+
+
+运行截图：
+![image](images/服务端sse运行截图.png)
+
+
+### 2、运行deepseek的mcp 客户端 连接sse服务端
+
+uv run client_sse_deepseek.py  http://127.0.0.1:9000/sse
+
+
+
+运行截图：
+问题：北京的天气怎么样？
+![image](images/客户端sse连接-截图.png)
+
 
 
 
