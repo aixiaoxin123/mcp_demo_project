@@ -15,10 +15,16 @@
 # 下面开始部署教程
 
 
+
+
+```bash
 # 下载代码
 
-
 git clone  https://github.com/aixiaoxin123/mcp_demo_project.git
+
+```
+
+
 
 # 进入代码目录
 cd mcp_demo_project
@@ -122,12 +128,17 @@ http://127.0.0.1:6274
 
 ### 1、运行sse的服务端  weather_server_sse.py
 
-进入sse_demo 的文件夹
+
+
+```bash
+#进入sse_demo 的文件夹
 cd sse_demo 
 
-运行sse的服务端，端口默认为9000
+#运行sse的服务端，端口默认为9000
 
 uv run weather_server_sse.py
+
+```
 
 
 
