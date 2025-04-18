@@ -1,0 +1,12 @@
+{
+    "mcpServers": {
+      "arxiv-mcp-server": {
+        "type": "sse",
+        "url": "https://mcp-e1e54bc0-31df-45b7.api-inference.modelscope.cn/sse"
+      },
+      "fetch": {
+      "type": "sse",
+      "url": "https://mcp-9e4980a0-0509-48ee.api-inference.modelscope.cn/sse"
+    }
+    }
+}

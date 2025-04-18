@@ -1,8 +1,14 @@
 
 
 # 项目介绍
-# mcp的天气查询的agent的完整示例-支持stdio模式，和 sse两种模式；
+# mcp的天气查询的agent的完整示例-支持stdio模式，和 sse两种模式，提供的webui可视化界面，方便mcp的问答；
 
+v1.2 版本 更新
+新增webui界面，方便用户问答；
+支持配置多个sse的服务端；
+
+
+v1.1 版本 更新
 支持sse、stdio两种模式；
 支持claude、openai、deepseek、qwen等大模型；
 天气查询api，采用  openweathermap 
@@ -61,7 +67,7 @@ source .venv/bin/activate
 
 
 # uv 安装对应的依赖包
-uv pip install mcp  mcp[cli]  anthropic  openai   httpx  -i https://pypi.tuna.tsinghua.edu.cn/simple/ 
+uv pip install  -r requirements.txt  -i https://pypi.tuna.tsinghua.edu.cn/simple/ 
 
 
 截图：
@@ -85,6 +91,28 @@ uv pip install mcp  mcp[cli]  anthropic  openai   httpx  -i https://pypi.tuna.ts
 
 ### 利用deepseek大模型进行问答
 
+#### 进入 stdio_demo 的文件夹
+cd stdio_demo 
+
+
+####  运行客户端和本地服务端
+uv run client_deepseek.py   weather_server.py
+
+
+运行截图：
+问题：北京的天气怎么样？
+![image](images/运行deepseek的截图.jpg)
+
+
+
+
+### 利用claude大模型进行问答
+
+uv run client_claude.py   weather_server.py
+
+
+运行截图：
+问题：北京的天气怎么样？
 uv run client_deepseek.py   weather_server.py
 
 
@@ -156,6 +184,43 @@ uv run client_sse_deepseek.py  http://127.0.0.1:9000/sse
 问题：北京的天气怎么样？
 ![image](images/客户端sse连接-截图.png)
 
+
+
+## 三、mcp的webui界面
+
+### 1、运行webui界面
+
+```bash
+#进入webui_demo 的文件夹
+cd webui_demo 
+
+#运行webui界面，端口默认为7860
+
+
+uv run webui_deepseek.py
+
+```
+### 2、使用教程
+
+访问界面：
+http://localhost:7860/
+
+输入问题：帮我查找 知识图谱 相关的最新的论文
+
+支持：实时返回结果；
+
+运行结果截图：
+![image](images/webui界面截图.png)
+
+在 魔塔的mcp社区，选择合适的mcp服务；
+
+https://modelscope.cn/mcp
+
+
+配置mcp的服务端：
+![image](images/配置mcp的服务端.png)
+
+或者修改 mcp.json 文件；
 
 
 

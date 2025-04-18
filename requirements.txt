@@ -1,0 +1,6 @@
+mcp
+mcp[cli]
+anthropic
+openai
+httpx
+gradio
