@@ -224,6 +224,44 @@ https://modelscope.cn/mcp
 
 
 
+# 四、docker部署mcp的webui的教程
+
+
+
+文件目录：
+mcp_demo_project/
+        mcp_webui_demo/
+        │
+        ├── webui_deepseek.py
+        ├── requirements.txt
+        ├── Dockerfile
+        ├── .env                <-- 将被挂载
+        ├── mcp.json            <-- 将被挂载
+
+
+进入当前目录：
+cd  mcp_webui_demo
+
+🐳 使用方式
+1. 构建镜像：
+
+docker build -t mcp-webui .
+
+
+2. 运行容器：
+
+🐳 启动容器时挂载：
+
+docker run -it --rm \
+  -v $(pwd)/.env:/app/.env \
+  -v $(pwd)/mcp.json:/app/mcp.json \
+  -p 7860:7860 \
+  mcp-webui
+
+
+
+
+
 
 # 参考教程：
 mcp官方的文档：
