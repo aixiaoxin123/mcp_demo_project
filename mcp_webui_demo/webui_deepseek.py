@@ -320,7 +320,7 @@ def save_env_file(content: str):
 
 
 with gr.Blocks(theme=gr.themes.Soft()) as demo:
-    gr.Markdown("# 🛠️ MCP 客户端工具调用演示")
+    gr.Markdown("# 🛠️ MCP 客户端工具调用演示---author : AI小新")
 
     with gr.Tab("💬 主界面"):
         with gr.Row():
@@ -329,10 +329,10 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
             submit_btn = gr.Button("开始问答", variant="primary")
         with gr.Row():
             status_box = gr.Textbox(label="问答状态", value="", interactive=False)
-
-
         with gr.Row():
             output_text = gr.Textbox(label="问答过程", interactive=False, lines=20, autoscroll=True)
+
+        
 
     with gr.Tab("⚙️ 服务端配置文件"):
         gr.Markdown("### 编辑 mcp.json 服务端配置文件")
@@ -358,6 +358,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
         tools_display = gr.Markdown("点击上方按钮查看可用工具")
 
 
+    gr.Markdown("# github 开源地址： https://github.com/aixiaoxin123/mcp_demo_project ")
 
     # 新增的    
     connect_servers()
