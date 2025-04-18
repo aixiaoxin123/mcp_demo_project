@@ -210,7 +210,7 @@ http://localhost:7860/
 支持：实时返回结果；
 
 运行结果截图：
-![image](images/webui界面截图.png)
+![image](images/webui运行界面.png)
 
 在 魔塔的mcp社区，选择合适的mcp服务；
 
@@ -218,7 +218,7 @@ https://modelscope.cn/mcp
 
 
 配置mcp的服务端：
-![image](images/配置mcp的服务端.png)
+![image](images/配置mcp服务端.png)
 
 或者修改 mcp.json 文件；
 
