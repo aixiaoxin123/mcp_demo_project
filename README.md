@@ -192,7 +192,7 @@ uv run client_sse_deepseek.py  http://127.0.0.1:9000/sse
 
 ```bash
 #进入webui_demo 的文件夹
-cd webui_demo 
+cd mcp_webui_demo 
 
 #运行webui界面，端口默认为7860
 
