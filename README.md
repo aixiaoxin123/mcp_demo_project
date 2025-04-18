@@ -229,6 +229,7 @@ https://modelscope.cn/mcp
 
 
 文件目录：
+```bash
 mcp_demo_project/
         mcp_webui_demo/
         │
@@ -237,6 +238,7 @@ mcp_demo_project/
         ├── Dockerfile
         ├── .env                <-- 将被挂载
         ├── mcp.json            <-- 将被挂载
+```
 
 
 进入当前目录：
@@ -245,19 +247,23 @@ cd  mcp_webui_demo
 🐳 使用方式
 1. 构建镜像：
 
+```bash
 docker build -t mcp-webui .
+
+```
 
 
 2. 运行容器：
 
 🐳 启动容器时挂载：
 
+```bash
 docker run -it --rm \
   -v $(pwd)/.env:/app/.env \
   -v $(pwd)/mcp.json:/app/mcp.json \
   -p 7860:7860 \
   mcp-webui
-
+```
 
 
 
