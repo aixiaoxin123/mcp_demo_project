@@ -210,7 +210,7 @@ http://localhost:7860/
 支持：实时返回结果；
 
 运行结果截图：
-![image](images/webui运行界面.png)
+![image](images/webui的问答示例截图.png)
 
 在 魔塔的mcp社区，选择合适的mcp服务；
 
