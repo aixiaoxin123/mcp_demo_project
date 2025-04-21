@@ -366,7 +366,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
 
     submit_btn.click(gradio_interface, inputs=[input_text], outputs=[output_text, status_box])
     save_config_btn.click(save_config_file, inputs=[config_editor], outputs=[config_status])
-    save_env_btn.click(save_env_file, inputs=[env_editor], outputs=[env_status])
+    # save_env_btn.click(save_env_file, inputs=[env_editor], outputs=[env_status])
     connect_btn.click(connect_servers, outputs=[connect_status])
     disconnect_btn.click(disconnect_servers, outputs=[connect_status])
 
@@ -375,4 +375,4 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
 
 if __name__ == "__main__":
 
-    demo.launch(debug=True, share=True, inbrowser=True, server_name="0.0.0.0")
+    demo.launch(debug=True, share=False, inbrowser=True, server_name="0.0.0.0")
