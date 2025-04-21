@@ -8,5 +8,5 @@ wheels/
 
 # Virtual environments
 .venv
-.env
+# .env
 modelscope_sse_mcp_demo
