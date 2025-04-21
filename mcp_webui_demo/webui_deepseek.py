@@ -340,11 +340,11 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
         save_config_btn = gr.Button("保存配置", variant="secondary")
         config_status = gr.Textbox(label="状态", interactive=False)
 
-    with gr.Tab("🔑 环境变量"):
-        gr.Markdown("### 编辑 .env 文件")
-        env_editor = gr.Code(value=load_env_file(), language="python", lines=10)
-        save_env_btn = gr.Button("保存环境变量", variant="secondary")
-        env_status = gr.Textbox(label="状态", interactive=False)
+    # with gr.Tab("🔑 环境变量"):
+    #     gr.Markdown("### 编辑 .env 文件")
+    #     env_editor = gr.Code(value=load_env_file(), language="python", lines=10)
+    #     save_env_btn = gr.Button("保存环境变量", variant="secondary")
+    #     env_status = gr.Textbox(label="状态", interactive=False)
 
     with gr.Tab("🔗 服务端控制"):
         gr.Markdown("### 连接和断开 SSE 服务器")
