@@ -224,7 +224,7 @@ https://modelscope.cn/mcp
 
 
 
-# 四、docker部署mcp的webui的教程
+# 四、docker部署mcp的webui的教程(不推荐这种方式，dockerfile，国外源，下载速度很慢)
 
 
 
