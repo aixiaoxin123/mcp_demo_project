@@ -130,6 +130,9 @@ uv run client_qwen.py   weather_server.py
 
 uv run client_openai.py   weather_server.py
 
+
+
+
 ### 运行deepseek的截图
 
 ![image](images/运行deepseek的截图.jpg)
@@ -180,9 +183,16 @@ uv run weather_server_sse.py
 ![image](images/服务端sse运行截图.png)
 
 
-### 2、运行deepseek的mcp 客户端 连接sse服务端
+### 2、利用ollama本地大模型进行问答
+
+uv run client_sse_ollama.py  http://127.0.0.1:9000/sse
+
+
+### 3、运行deepseek的mcp 客户端 连接sse服务端
 
 uv run client_sse_deepseek.py  http://127.0.0.1:9000/sse
+
+
 
 
 
