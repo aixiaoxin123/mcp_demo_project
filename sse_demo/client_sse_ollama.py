@@ -16,10 +16,10 @@ load_dotenv()  # load environment variables from .env
 from openai import OpenAI
 import json
 
-api_key = os.environ["DEEPSEEK_API_KEY"]
-base_url = os.environ["DEEPSEEK_API_BASE"]
+api_key = os.environ["OLLAMA_API_KEY"]
+base_url = os.environ["OLLAMA_API_BASE"]
 
-model_type=os.environ["DEEPSEEK_MODEL"]
+model_type=os.environ["OLLAMA_MODEL"]
 
 
 # print(api_key)

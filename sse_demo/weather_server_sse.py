@@ -93,19 +93,28 @@ async def query_weather(city: str) -> str:
 
 
 
+
 def create_starlette_app(mcp_server: Server, *, debug: bool = False) -> Starlette:
     """Create a Starlette application that can server the provied mcp server with SSE."""
+    # 创建一个Starlette应用程序，可以提供SSE服务的mcp服务器
+    # 创建一个Starlette应用程序，可以提供SSE服务的mcp服务器
     sse = SseServerTransport("/messages/")
 
+        # 处理SSE请求
+        # 处理SSE请求
     async def handle_sse(request: Request) -> None:
         async with sse.connect_sse(
                 request.scope,
                 request.receive,
+            # 运行mcp服务器
+            # 运行mcp服务器
                 request._send,  # noqa: SLF001
         ) as (read_stream, write_stream):
             await mcp_server.run(
                 read_stream,
                 write_stream,
+    # 返回Starlette应用程序
+    # 返回Starlette应用程序
                 mcp_server.create_initialization_options(),
             )
 
