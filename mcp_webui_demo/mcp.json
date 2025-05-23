@@ -11,6 +11,11 @@
     "time": {
     "type": "sse",
     "url": "https://mcp-94ce889f-517c-426c.api-inference.modelscope.cn/sse"
-  }
+  },
+      "howtocook-mcp": {
+        "type": "sse",
+        "url": "https://mcp.api-inference.modelscope.cn/sse/0834c80993e34a"
+      }
+
   }
 }
